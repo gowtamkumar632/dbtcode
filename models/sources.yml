@@ -1,0 +1,11 @@
+sources:
+  - name: s1
+    database: hdfc_db
+    schema: account_schema
+    tables:
+      - name: t_cust_info
+      - name: customers
+      - name: orders
+      - name: payment  
+      - name: tt_check
+      - name: tt_time
