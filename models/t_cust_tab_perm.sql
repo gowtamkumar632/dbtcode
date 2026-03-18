@@ -1,0 +1,7 @@
+{{
+    config(
+        materialized = 'table',
+        transient = false
+    )
+}}
+select c_first_name from account_schema.t_cust
