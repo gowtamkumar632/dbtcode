@@ -1,0 +1,1 @@
+{{ check_nulls(ref('stg_emp')) }}

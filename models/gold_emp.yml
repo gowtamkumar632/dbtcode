@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: g_emp
+
+    columns:
+      - name: deptno
+        tests:
+          - not_null

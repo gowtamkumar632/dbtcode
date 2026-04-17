@@ -1,0 +1,37 @@
+version: 2
+
+models:
+  - name: test_model
+    description: "Incremental insert model"
+
+    columns:
+      - name: empno
+        description: "Primary key"
+        data_tests:
+          - not_null
+          - unique
+
+      - name: deptno
+        description: "Department number"
+        data_tests:
+          - not_null
+
+    data_tests:
+      - minimum_row_count:
+          arguments:
+            min_count: 100
+
+  - name: inc_insert
+    description: "Incremental model"
+
+    columns:
+      - name: id
+        description: "Primary key"
+        data_tests:
+          - not_null
+          - unique
+
+    data_tests:
+      - minimum_row_count:
+          arguments:
+            min_count: 5

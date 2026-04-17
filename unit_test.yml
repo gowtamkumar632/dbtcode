@@ -1,0 +1,21 @@
+version: 2
+
+unit_tests:
+  - name: unittest_emp_join_and_salary
+    model: mart_emp
+
+    given:
+      - input: ref('stg_emp')
+        rows:
+          - {empno: 1, ename: 'A', deptno: 10, sal: 6000}
+          - {empno: 2, ename: 'B', deptno: 20, sal: 3000}
+
+      - input: ref('stg_dept')
+        rows:
+          - {deptno: 10, dname: 'HR'}
+          - {deptno: 20, dname: 'IT'}
+
+    expect:
+      rows:
+        - {empno: 1, ename: 'A', deptno: 10, sal: 6000, dname: 'HR', salary_band: 'HIGH'}
+        - {empno: 2, ename: 'B', deptno: 20, sal: 3000, dname: 'IT', salary_band: 'LOW'}

@@ -12,3 +12,4 @@ sources:
       - name: t_emp
       - name: tt_inc
       - name: tt_inc1
+      - name: t_dept

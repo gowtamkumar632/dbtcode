@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: sl_emp
+
+    columns:
+      - name: empno
+        description: "Employee ID"
+        tests:
+          - not_null
+
+      - name: salary_band
+        description: "Derived salary category"
+        tests:
+          - not_null
+
+    data_tests:
+      - min_row_count:
+          arguments:
+            min_count: 5

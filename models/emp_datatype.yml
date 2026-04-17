@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: mart_emp
+    config:
+      contract:
+        enforced: true
+
+    columns:
+      - name: empno
+        data_type: number(4,0)
+
+      - name: ename
+        data_type: string
+
+      - name: deptno
+        data_type: number
+
+      - name: sal
+        data_type: number
+
+      - name: salary_band
+        data_type: string

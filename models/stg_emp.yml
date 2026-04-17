@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: s1_emp
+
+    columns:
+      - name: empno
+        data_tests:
+          - not_null
+          - unique
+
+      - name: deptno
+        data_tests:
+          - not_null
+
+    data_tests:
+      - min_row_count:
+          arguments:
+            min_count: 5
